@@ -234,6 +234,31 @@ func init() {
         }
       }
     },
+    "data-configuration": {
+      "type": "object",
+      "properties": {
+        "paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/data-path"
+          }
+        }
+      }
+    },
+    "data-path": {
+      "description": "Device-to-control plane paths mapping",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Path in the workload container",
+          "type": "string"
+        },
+        "target": {
+          "description": "Path in the control plane storage",
+          "type": "string"
+        }
+      }
+    },
     "device-configuration": {
       "type": "object",
       "properties": {
@@ -606,6 +631,10 @@ func init() {
     "workload": {
       "type": "object",
       "properties": {
+        "data": {
+          "description": "Configuration for data transfer",
+          "$ref": "#/definitions/data-configuration"
+        },
         "name": {
           "description": "Name of the workload",
           "type": "string"
@@ -870,6 +899,31 @@ func init() {
         }
       }
     },
+    "data-configuration": {
+      "type": "object",
+      "properties": {
+        "paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/data-path"
+          }
+        }
+      }
+    },
+    "data-path": {
+      "description": "Device-to-control plane paths mapping",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "Path in the workload container",
+          "type": "string"
+        },
+        "target": {
+          "description": "Path in the control plane storage",
+          "type": "string"
+        }
+      }
+    },
     "device-configuration": {
       "type": "object",
       "properties": {
@@ -1242,6 +1296,10 @@ func init() {
     "workload": {
       "type": "object",
       "properties": {
+        "data": {
+          "description": "Configuration for data transfer",
+          "$ref": "#/definitions/data-configuration"
+        },
         "name": {
           "description": "Name of the workload",
           "type": "string"
