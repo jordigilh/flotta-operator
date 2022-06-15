@@ -10,7 +10,7 @@ __root="$(cd "$(dirname "${__dir}")" && pwd)"
 
 if which podman 2>/dev/null >&2; then
     export CONTAINER_RUNTIME="podman"
-    export CONTAINER_RUNTIME_OPTS="--userns=keep-id"
+    #export CONTAINER_RUNTIME_OPTS="--userns=keep-id"
 elif which docker 2>/dev/null >&2; then
     export CONTAINER_RUNTIME="docker"
 else
