@@ -40,7 +40,7 @@ var localTestCertificates = []string{
 }
 
 const (
-	EdgeDeviceImage string = "quay.io/project-flotta/edgedevice:latest"
+	EdgeDeviceImage string = "quay.io/jordigilh/edgedevice:latest"
 	Namespace       string = "default" // the namespace where flotta operator is running
 	waitTimeout     int    = 180
 	sleepInterval   int    = 2

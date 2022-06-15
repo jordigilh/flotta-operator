@@ -227,7 +227,7 @@ var _ = Describe("e2e", func() {
 			Expect(err).To(BeNil())
 			_, err = workload.Create(edgeworkloadDeviceId("nginx", device.GetId(), hostPort, nginxPort))
 			Expect(err).To(BeNil())
-			err = device.WaitForWorkloadState("nginx", "Created")
+			err = device.WaitForWorkloadState("nginx", "Failed")
 			Expect(err).To(BeNil())
 
 			// then
